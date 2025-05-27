@@ -1,6 +1,5 @@
 # 使用Windows基础镜像
-FROM mcr.microsoft.com/vs/visualstudio/2022/build-tools:latest
-
+FROM mcr.microsoft.com/windows/servercore:ltsc2025
 # 安装Python和Cython
 RUN powershell -Command "Invoke-WebRequest -Uri https://www.python.org/ftp/python/3.11.3/python-3.11.3.exe -OutFile python.exe; \
     Start-Process python.exe -ArgumentList '/quiet InstallAllUsers=1 PrependPath=1' -Wait; \
